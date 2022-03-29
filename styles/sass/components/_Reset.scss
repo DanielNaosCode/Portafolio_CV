@@ -4,6 +4,8 @@ html {
     /* el ancho y altura de una caja ira desde el borde y no desde el contenido */
     font-family: $font;
     font-size: 16px;
+    scroll-behavior: smooth;
+    /* efecto de escroll con css */
 }
 
 *,
@@ -13,7 +15,24 @@ html {
     /* Significa que todos los elementos que su contenido sea con afer y beafore hereden el tamaño de caja del nodo principal, en este caso HTML */
 }
 
-/* encabezados con reseteo a 0 y ya yo le dare el margen adecuado*/
+body {
+    margin: 0;
+    overflow-x: hidden;
+    /* un reseteo con lo que se desborda en el curpo de la pagina y ya no aparecerá la barra de desplazamiento */
+    color: $text-color
+}
+
+a {
+    color: $link-color;
+    transition: all 0.5s ease-out;
+    /* Ease-out inicio rapido y al final lento el efecto */
+}
+
+a:hover {
+    opacity: 0.75;
+}
+
+/* encabezados con reseteo a 0 y ya yo le dare el margen adecuado y se dan tamaños por defecto a cada encabezado*/
 h1 {
     margin: 0;
     font-size: 2rem;
@@ -42,4 +61,15 @@ h5 {
 h6 {
     margin: 0;
     font-size: .7rem;
+}
+
+img {
+    /* aqui decimos que todas las imagenes ocuparan  por defecto el 100% de su contenedor */
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    line-height: 1.6;
+    /* interlineado entre lineas de parrafos */
 }
