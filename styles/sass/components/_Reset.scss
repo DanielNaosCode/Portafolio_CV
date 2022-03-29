@@ -1,0 +1,45 @@
+/* ***************** Reset ******************* */
+html {
+    box-sizing: border-box;
+    /* el ancho y altura de una caja ira desde el borde y no desde el contenido */
+    font-family: $font;
+    font-size: 16px;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: initial;
+    /* Significa que todos los elementos que su contenido sea con afer y beafore hereden el tamaño de caja del nodo principal, en este caso HTML */
+}
+
+/* encabezados con reseteo a 0 y ya yo le dare el margen adecuado*/
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.125rem;
+}
+
+h4 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+h5 {
+    margin: 0;
+    font-size: .85rem;
+}
+
+h6 {
+    margin: 0;
+    font-size: .7rem;
+}

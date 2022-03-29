@@ -1,6 +1,56 @@
-/* Asi es como se importan los componenetes de sass, a los componentes se les tiene que poner un _ para que no se compilen por separado sino desde el archivo principal */
-@import "components/_hola.css";
-@import "components/_generals.css";
-@import "components/_generalss.css";
+@charset "UTF-8";
+/* **************** Custom Properties ************* */
+/* En el archivo SCSS estas todas las variables del custom properties */
+/* ***************** Reset ******************* */
+html {
+  box-sizing: border-box;
+  /* el ancho y altura de una caja ira desde el borde y no desde el contenido */
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: initial;
+  /* Significa que todos los elementos que su contenido sea con afer y beafore hereden el tamaño de caja del nodo principal, en este caso HTML */
+}
+
+/* encabezados con reseteo a 0 y ya yo le dare el margen adecuado*/
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+h5 {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+h6 {
+  margin: 0;
+  font-size: 0.7rem;
+}
+
+/* ***************** Utilities ******************* */
+/* creo una clase y copio el efecto */
+.box-shadow-1 {
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -1,3 +1,4 @@
-/* Asi es como se importan los componenetes de sass, a los componentes se les tiene que poner un _ para que no se compilen por separado sino desde el archivo principal */
-@import "components/_hola.css";
-@import "components/_generals.css";
+@import "components/General";
+@import "components/CustomProperties";
+@import "components/Reset";
+@import "components/Utilities";
