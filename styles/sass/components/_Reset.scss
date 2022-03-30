@@ -11,8 +11,8 @@ html {
 *,
 *::after,
 *::before {
-    box-sizing: initial;
-    /* Significa que todos los elementos que su contenido sea con afer y beafore hereden el tamaño de caja del nodo principal, en este caso HTML */
+    box-sizing: inherit;
+    /* Significa que todos los elementos que su contenido sea con afer y beafore hereden el tamaño de caja del nodo principal, en este caso HTML (inherit significa heredar)*/
 }
 
 body {

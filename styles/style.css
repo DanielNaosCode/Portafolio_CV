@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* **************** Custom Properties ************* */
 /* En el archivo SCSS estas todas las variables del custom properties */
+/* variable de ancho maximo (asi si debo cambiar el ancho, solo se cambia aqui y se modifica en todo donde se agregó la variable */
 /* ***************** Reset ******************* */
 html {
   box-sizing: border-box;
@@ -14,8 +15,8 @@ html {
 *,
 *::after,
 *::before {
-  box-sizing: initial;
-  /* Significa que todos los elementos que su contenido sea con afer y beafore hereden el tamaño de caja del nodo principal, en este caso HTML */
+  box-sizing: inherit;
+  /* Significa que todos los elementos que su contenido sea con afer y beafore hereden el tamaño de caja del nodo principal, en este caso HTML (inherit significa heredar)*/
 }
 
 body {
@@ -77,12 +78,100 @@ p {
   /* interlineado entre lineas de parrafos */
 }
 
+/* *********************** Menú *********************** */
+.menu-btn {
+  outline: thin solid #2BCAC8;
+  /* "contorno o outline" delgado y linea solida con tal color */
+  background-color: #091E2C;
+  border: 0;
+  cursor: pointer;
+}
+
+.menu-btn svg {
+  /* para dar color a los archivos svg se utiliza la propiedad fill que significa rellenar */
+  fill: #2BCAC8;
+}
+
+.menu {
+  position: fixed;
+  /* cuando se usa fixed se pierden las propiedades de ancho y altura */
+  left: 0;
+  bottom: 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #091E2C;
+  opacity: 0;
+  /* opacidad en 0 entonces lo eslemntos ahi estan pero no se ven */
+  pointer-events: none;
+  /* como los elementos ahi siguen funcionando aunque no se vean se utiliza "pointer-events:none" para que aunque se aplasten los elemntos sin verlos, estos no tengan ningun efecto*/
+  transition: opacity 0.5 ease;
+  /* 0.5 de aceleracion del efecto */
+}
+
+/* el menu se activa de la siguiente manera */
+.menu.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu a {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #2BCAC8;
+}
+
+.menu a:hover {
+  color: #FFFFFF;
+  background: #2BCAC8;
+}
+
+/* ********************** Components ********************** */
 /* ***************** Utilities ******************* */
 /* creo una clase y copio el efecto */
 .box-shadow-1 {
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
 }
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+.none {
+  display: none;
+}
+
 /* **************** Site Styles ************* */
+/* comenzaremos con el modelo MOBILE FIRST */
+.header {
+  /* el header en version mobile va hasta abajo de la pantalla */
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  /* z-index tan alto para que ningun elemnto para por encima del menú */
+  width: 100%;
+  padding: 1rem;
+  height: 4rem;
+  background-color: #091E2C;
+}
+
+.header > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  color: #2BCAC8;
+  font-weight: bold;
+  font-size: 2rem;
+  text-decoration: none;
+}
 
 /*# sourceMappingURL=style.css.map */

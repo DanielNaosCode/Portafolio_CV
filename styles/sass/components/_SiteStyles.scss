@@ -1,1 +1,28 @@
 /* **************** Site Styles ************* */
+
+/* comenzaremos con el modelo MOBILE FIRST */
+.header {
+    /* el header en version mobile va hasta abajo de la pantalla */
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    /* z-index tan alto para que ningun elemnto para por encima del menú */
+    width: 100%;
+    padding: 1rem;
+    height: $header-height;
+    background-color: $second-color;
+}
+
+.header>.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: $first-color;
+    font-weight: bold;
+    font-size: 2rem;
+    text-decoration: none;
+}
