@@ -25,8 +25,8 @@
     /* opacidad en 0 entonces lo eslemntos ahi estan pero no se ven */
     pointer-events: none;
     /* como los elementos ahi siguen funcionando aunque no se vean se utiliza "pointer-events:none" para que aunque se aplasten los elemntos sin verlos, estos no tengan ningun efecto*/
-    transition: opacity .5 ease;
-    /* 0.5 de aceleracion del efecto */
+    transition: opacity .5s ease;
+    /* 0.5 segundos y se acelerara al principio del efecto */
 }
 
 /* el menu se activa de la siguiente manera */
