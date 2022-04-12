@@ -48,3 +48,35 @@
     color: $white-color;
     background: $first-color;
 }
+
+@media screen and (min-width:1024px) {
+    .menu-btn {
+        display: none;
+    }
+
+    .menu {
+        position: static;
+        /* este es el posicionamiento por defecto de css y se lo volvimos a poner */
+        width: auto;
+        /* el anco se adapta de acuerdo al numero de enlaces que se tienen */
+        flex-direction: row;
+        /* como ya tiene flexbox que se puso anteriormente se pueden usar sus propiedades */
+        opacity: 1;
+        /* se vulve a mostrar el menu porque le habiamos puesto la opacidad en 0 */
+        pointer-events: auto;
+        /* y el cursor ahora es automatio de nuevo */
+    }
+
+    .menu a {
+        padding: 0 1rem;
+        /* a los enlaces que estan dentro de menu, se le quita padin arriba y abajo pero se le pone 1 rem de padding a los lados */
+    }
+
+    .menu a:last-child {
+        padding-right: 0;
+    }
+
+    .menu a:hover {
+        background-color: transparent;
+    }
+}

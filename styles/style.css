@@ -78,6 +78,7 @@ p {
   /* interlineado entre lineas de parrafos */
 }
 
+/* ********************** Components ********************** */
 /* *********************** Menú *********************** */
 .menu-btn {
   outline: thin solid #2BCAC8;
@@ -129,7 +130,37 @@ p {
   background: #2BCAC8;
 }
 
-/* ********************** Components ********************** */
+@media screen and (min-width: 1024px) {
+  .menu-btn {
+    display: none;
+  }
+
+  .menu {
+    position: static;
+    /* este es el posicionamiento por defecto de css y se lo volvimos a poner */
+    width: auto;
+    /* el anco se adapta de acuerdo al numero de enlaces que se tienen */
+    flex-direction: row;
+    /* como ya tiene flexbox que se puso anteriormente se pueden usar sus propiedades */
+    opacity: 1;
+    /* se vulve a mostrar el menu porque le habiamos puesto la opacidad en 0 */
+    pointer-events: auto;
+    /* y el cursor ahora es automatio de nuevo */
+  }
+
+  .menu a {
+    padding: 0 1rem;
+    /* a los enlaces que estan dentro de menu, se le quita padin arriba y abajo pero se le pone 1 rem de padding a los lados */
+  }
+
+  .menu a:last-child {
+    padding-right: 0;
+  }
+
+  .menu a:hover {
+    background-color: transparent;
+  }
+}
 /* ***************** Utilities ******************* */
 /* creo una clase y copio el efecto */
 .box-shadow-1 {
@@ -172,6 +203,17 @@ p {
   font-weight: bold;
   font-size: 2rem;
   text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    position: sticky;
+    /* sticky es una mezcla de posicionamiento fijo y relativo solo que se comporta como fijo en la altura que tu definas y no tapa elementos ya creados como en el fixed que se pone enciama de los elementos, este si funciona en forma de cascada */
+    top: 0;
+    padding: 0.5rem;
+    height: calc(4rem - 0.5rem);
+    /* se redujo el tamaño del heigth respecto al 0.5rem que quitamos */
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
