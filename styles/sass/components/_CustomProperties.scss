@@ -1,5 +1,10 @@
 /* **************** Custom Properties ************* */
 /* En el archivo SCSS estas todas las variables del custom properties */
+:root {
+    --black-alpha-color: rgba(0, 0, 0, 0.5);
+    --white-color: #FFFFFF;
+}
+
 $font: "Raleway",
 sans-serif;
 $first-color: #2BCAC8;

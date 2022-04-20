@@ -1,0 +1,37 @@
+/* ************************ Hero Image ************************ */
+.hero-image {
+    background-image: var(--image);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* centra la imagen en x & y */
+    background-size: cover;
+    /* se adapta en proporcion al tamaño del contenedor */
+    background-attachment: var(--hero-attachment);
+    /* fixe sirve para que no se escrolee la imagen */
+}
+
+.hero-image-opacity {
+    width: 100%;
+    min-height: 100vh;
+    /* vh viewport heigth */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--hero-opacity-color);
+}
+
+.hero-image-title {
+    font-size: 7.5vw;
+    /* unidades view port esto hace lo siguiente: va a tomar el 7.5 % del tamaño proporcional del tamaño de la pantalla osea del espacio del viewport disponible. Des esta forma evitamos hacer media query para estos titulos */
+    color: var(--hero-text-color);
+}
+
+.hero-image-subtitle {
+    font-size: 2.2vw;
+    color: var(--hero-text-color);
+}
+
+.btn-hero {
+    margin-top: 2rem;
+}

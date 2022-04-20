@@ -1,6 +1,11 @@
 @charset "UTF-8";
 /* **************** Custom Properties ************* */
 /* En el archivo SCSS estas todas las variables del custom properties */
+:root {
+  --black-alpha-color: rgba(0, 0, 0, 0.5);
+  --white-color: #FFFFFF;
+}
+
 /* variable de ancho maximo (asi si debo cambiar el ancho, solo se cambia aqui y se modifica en todo donde se agregó la variable */
 /* ***************** Reset ******************* */
 html {
@@ -161,20 +166,42 @@ p {
     background-color: transparent;
   }
 }
-/* ***************** Utilities ******************* */
-/* creo una clase y copio el efecto */
-.box-shadow-1 {
-  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
+/* ************************ Hero Image ************************ */
+.hero-image {
+  background-image: var(--image);
+  background-repeat: no-repeat;
+  background-position: center;
+  /* centra la imagen en x & y */
+  background-size: cover;
+  /* se adapta en proporcion al tamaño del contenedor */
+  background-attachment: var(--hero-attachment);
+  /* fixe sirve para que no se escrolee la imagen */
 }
 
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1200px;
+.hero-image-opacity {
+  width: 100%;
+  min-height: 100vh;
+  /* vh viewport heigth */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--hero-opacity-color);
 }
 
-.none {
-  display: none;
+.hero-image-title {
+  font-size: 7.5vw;
+  /* unidades view port esto hace lo siguiente: va a tomar el 7.5 % del tamaño proporcional del tamaño de la pantalla osea del espacio del viewport disponible. Des esta forma evitamos hacer media query para estos titulos */
+  color: var(--hero-text-color);
+}
+
+.hero-image-subtitle {
+  font-size: 2.2vw;
+  color: var(--hero-text-color);
+}
+
+.btn-hero {
+  margin-top: 2rem;
 }
 
 /* **************** Site Styles ************* */
@@ -214,6 +241,33 @@ p {
     height: calc(4rem - 0.5rem);
     /* se redujo el tamaño del heigth respecto al 0.5rem que quitamos */
   }
+}
+/* ***************** Utilities ******************* */
+/* creo una clase y copio el efecto */
+.box-shadow-1 {
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+.btn {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: inline-block;
+  width: 200px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: #2BCAC8;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+.none {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

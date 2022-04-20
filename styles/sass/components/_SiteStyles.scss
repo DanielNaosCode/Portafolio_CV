@@ -27,6 +27,8 @@
     text-decoration: none;
 }
 
+
+
 @media screen and (min-width:768px) {}
 
 @media screen and (min-width:1024px) {
@@ -35,6 +37,7 @@
         /* sticky es una mezcla de posicionamiento fijo y relativo solo que se comporta como fijo en la altura que tu definas y no tapa elementos ya creados como en el fixed que se pone enciama de los elementos, este si funciona en forma de cascada */
         top: 0;
         padding: 0.5rem;
-        height: calc(#{$header-height} - 0.5rem); /* se redujo el tamaño del heigth respecto al 0.5rem que quitamos */
+        height: calc(#{$header-height} - 0.5rem);
+        /* se redujo el tamaño del heigth respecto al 0.5rem que quitamos */
     }
 }
