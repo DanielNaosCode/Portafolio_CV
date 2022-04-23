@@ -166,6 +166,18 @@ p {
     background-color: transparent;
   }
 }
+/* ****************** Habilidades ******************** */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.2rem;
+  text-align: center;
+}
+
+.skills li {
+  list-style: none;
+}
+
 /* ************************ Hero Image ************************ */
 .hero-image {
   background-image: var(--image);
@@ -243,12 +255,13 @@ p {
   }
 }
 /* ***************** Utilities ******************* */
-/* creo una clase y copio el efecto */
+/* creó una clase y copio el efecto */
 .box-shadow-1 {
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
 }
 
 .btn {
+  /* diseño del boton */
   border-radius: 0.5rem;
   padding: 1rem;
   display: inline-block;
@@ -266,8 +279,39 @@ p {
   max-width: 1200px;
 }
 
+.gray-scale {
+  filter: grayscale(1);
+  /* efecto de escala de grises */
+}
+
 .none {
   display: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+@media screen and (min-width: 1024px) {
+  .text-lg-center {
+    text-align: center;
+  }
+
+  .text-lg-left {
+    text-align: left;
+  }
+
+  .text-lg-right {
+    text-align: right;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

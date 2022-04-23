@@ -1,0 +1,14 @@
+/* ****************** Habilidades ******************** */
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.2rem;
+    text-align: center;
+
+}
+
+.skills li {
+    list-style: none;
+
+}
