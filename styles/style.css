@@ -218,6 +218,10 @@ p {
 
 /* **************** Site Styles ************* */
 /* comenzaremos con el modelo MOBILE FIRST */
+.about > article {
+  margin-bottom: 2rem;
+}
+
 .header {
   /* el header en version mobile va hasta abajo de la pantalla */
   position: fixed;
@@ -245,6 +249,13 @@ p {
 }
 
 @media screen and (min-width: 1024px) {
+  .about {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content: space-between;
+    align-content: center;
+  }
+
   .header {
     position: sticky;
     /* sticky es una mezcla de posicionamiento fijo y relativo solo que se comporta como fijo en la altura que tu definas y no tapa elementos ya creados como en el fixed que se pone enciama de los elementos, este si funciona en forma de cascada */
@@ -288,6 +299,10 @@ p {
   display: none;
 }
 
+.section {
+  padding: 2rem 1rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -301,6 +316,13 @@ p {
 }
 
 @media screen and (min-width: 1024px) {
+  .full-lg-screen {
+    /* clase para hacer el tammaño full screen despues de 1024 px de pantalla */
+    width: 100%;
+    min-height: 100vh;
+    /* se adaptara al tamño del viewport osea de la pantalla */
+  }
+
   .text-lg-center {
     text-align: center;
   }
