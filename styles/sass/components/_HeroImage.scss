@@ -7,13 +7,13 @@
     background-size: cover;
     /* se adapta en proporcion al tamaño del contenedor */
     background-attachment: var(--hero-attachment);
-    /* fixe sirve para que no se escrolee la imagen */
+    /* fixed sirve para que no se escrolee la imagen */
 }
 
 .hero-image-opacity {
     width: 100%;
     min-height: 100vh;
-    /* vh viewport heigth */
+    /* vh viewport heigth (altura de la pantalla), tomara la altura de toda la pantalla para mostrar el apartado que elegimos */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,12 +23,13 @@
 
 .hero-image-title {
     font-size: 7.5vw;
-    /* unidades view port esto hace lo siguiente: va a tomar el 7.5 % del tamaño proporcional del tamaño de la pantalla osea del espacio del viewport disponible. Des esta forma evitamos hacer media query para estos titulos */
+    /* unidades view port: esto hace lo siguiente: va a tomar el 7.5 % del tamaño proporcional del tamaño de la pantalla osea del espacio del viewport disponible. Des esta forma evitamos hacer media query para estos titulos, practicamente es para el Responsive Designe. */
     color: var(--hero-text-color);
 }
 
 .hero-image-subtitle {
     font-size: 2.2vw;
+    /* unidades view port, hara un calculo y ocupara el 2.2vw de alto del viewport, obviamente si se hace grande la pantalla se hara grande el texto y viseversa */
     color: var(--hero-text-color);
 }
 

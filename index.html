@@ -45,6 +45,7 @@
 
     <!-- es recomendado poner las id en español ya que el contenido de la página será en ese lenguaje y por lo general las id son las que se muestran en el link de la poagina -->
     <section id="inicio" class="home">
+        <!-- a continuacion se hacen variables de css utilizando style (que si bien es mala practica para diseño, para mandar a traer variables no, lo que sucedera es que al utilizar este style y su respectiva variable, esta solo estara limitada a la etiqueta donde fue declarada, si seintenta usar esa variable en otra parte del documento no se podra utilizar ya que solo está limitada al article siguiente. asi, si volvemos a utilizar la clase "hero-image" los efectos puestos que utilizaron estas variables no afectaran a todas las clases, se tendran que asignar aparte. ejemplo: el background aqui es una imagen, y si volvemos a utilizar la clase hero-image, seria el mismo background pero como usamos la variable para asignarlo entonces hay que poner de nuevo un nuevo fondo.) -->
         <article class="hero-image" style="--image: url('../assets/hero-home-image.jpg'); --hero-attachment:fixed;">
             <aside class="hero-image-opacity" style="--hero-opacity-color: var(--black-alpha-color);">
                 <div class="hero-image-content">

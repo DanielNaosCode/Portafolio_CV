@@ -50,9 +50,13 @@
 }
 
 @media screen and(min-width: 1024px) {
-    .full-lg-screen { /* clase para hacer el tammaño full screen despues de 1024 px de pantalla */
+
+    /* esto es importante es el view port pantalla completa*/
+    .full-lg-screen {
+        /* clase para hacer el tammaño full screen despues de 1024 px de pantalla */
         width: 100%;
-        min-height: 100vh; /* se adaptara al tamño del viewport osea de la pantalla */
+        min-height: 100vh;
+        /* se adaptara al tamaño del viewport osea de la pantalla, practicamente si le damos clic en acerca, nos mandara al apartado acerca pero toda la pantalla solo mostrara ese apartado y no se veran otros apartados */
     }
 
     .text-lg-center {
