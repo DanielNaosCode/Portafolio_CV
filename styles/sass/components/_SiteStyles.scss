@@ -40,7 +40,7 @@
         display: grid;
         grid-template-columns: repeat(3, 30%);
         justify-content: space-between;
-        align-content: center;
+        align-content: center; /* DE ESTA MANERA EL CONTENIDO ESTARA CENTRADO EN MEDIO DE LA PANTALL */
     }
 
     .header {
