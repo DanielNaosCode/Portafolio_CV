@@ -1,4 +1,7 @@
 /* ***************** Utilities ******************* */
+.bg-gray-ligth {
+    background-color: $gray-light-color;
+}
 
 /* creó una clase y copio el efecto */
 .box-shadow-1 {
@@ -36,6 +39,18 @@
 .section {
     padding: 2rem 1rem;
 }
+
+.section-title {
+    border-top: thin solid $first-color;
+    border-bottom: thin solid $first-color;
+    margin: 2rem auto;
+    padding: .5rem 1rem;
+    text-align: center;
+    color: $title-color;
+    width: 250px;
+
+}
+
 /* RESPONSIVE PARA TAMAÑOS */
 .text-center {
     text-align: center;
@@ -70,4 +85,5 @@
         text-align: right;
     }
 }
+
 /* AQUI TERMINA ESTE RESPONSIVE */
