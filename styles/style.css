@@ -178,7 +178,7 @@ p {
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
-  opacity: 1;
+  opacity: 0;
   pointer-events: none;
   transition: all 1s;
 }
@@ -201,7 +201,7 @@ p {
 
 .modal#trabajo-1:target {
   opacity: 1;
-  pointer-events: auto;
+  pointer-events: autos;
 }
 
 /* ****************** Habilidades ******************** */
