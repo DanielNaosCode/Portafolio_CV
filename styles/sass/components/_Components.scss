@@ -117,7 +117,7 @@
     fill: $first-color;
 }
 
-.modal#trabajo-1:target {
+.modal[id|="trabajo"]:target {
     opacity: 1;
-    pointer-events: autos;
+    pointer-events: auto;
 }
