@@ -70,6 +70,33 @@
     height: 100%;
 }
 
+.portfolio-modal {
+    padding: 1rem;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: $white-color;
+}
+
+.portfolio-modal h3 {
+    border-bottom: medium solid $first-color;
+    padding: .5rem 0;
+    margin: 1rem auto;
+    color: $title-color;
+}
+
+.portfolio-details {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    /* una columna de 40% y otra de 60% */
+    grid-auto-rows: 2rem;
+    /* este es el tamaño por defecto que se la dara a las filas implicitamente  */
+}
+
+.portfolio-details b {
+    color: $first-color;
+}
+
 .service-card {
     margin: 1rem auto;
     padding: 1rem;
@@ -85,6 +112,7 @@
     margin-bottom: 1.25rem;
 }
 
+
 /* Tamaño tablet */
 @media screen and (min-width:768px) {
     .portfolio>.container {
@@ -94,6 +122,16 @@
 
     .portfolio .section-title {
         grid-column: span 2;
+    }
+
+    .portfolio-modal {
+        flex-direction: row;
+        max-width: 800px;
+    }
+
+    .portfolio-info {
+        margin-left: 1rem;
+        align-self: center;
     }
 
     .services>.container {

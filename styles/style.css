@@ -4,6 +4,7 @@
 :root {
   --black-alpha-color: rgba(0, 0, 0, 0.5);
   --white-color: #FFFFFF;
+  --white-alpha-color: rgba(255, 255, 255, 0.5);
 }
 
 /* variable de ancho maximo (asi si debo cambiar el ancho, solo se cambia aqui y se modifica en todo donde se agregó la variable */
@@ -329,6 +330,33 @@ p {
   height: 100%;
 }
 
+.portfolio-modal {
+  padding: 1rem;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+}
+
+.portfolio-modal h3 {
+  border-bottom: medium solid #2BCAC8;
+  padding: 0.5rem 0;
+  margin: 1rem auto;
+  color: #333333;
+}
+
+.portfolio-details {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  /* una columna de 40% y otra de 60% */
+  grid-auto-rows: 2rem;
+  /* este es el tamaño por defecto que se la dara a las filas implicitamente  */
+}
+
+.portfolio-details b {
+  color: #2BCAC8;
+}
+
 .service-card {
   margin: 1rem auto;
   padding: 1rem;
@@ -353,6 +381,16 @@ p {
 
   .portfolio .section-title {
     grid-column: span 2;
+  }
+
+  .portfolio-modal {
+    flex-direction: row;
+    max-width: 800px;
+  }
+
+  .portfolio-info {
+    margin-left: 1rem;
+    align-self: center;
   }
 
   .services > .container {
