@@ -140,7 +140,6 @@ p {
   .menu-btn {
     display: none;
   }
-
   .menu {
     position: static;
     /* este es el posicionamiento por defecto de css y se lo volvimos a poner */
@@ -153,16 +152,13 @@ p {
     pointer-events: auto;
     /* y el cursor ahora es automatio de nuevo */
   }
-
   .menu a {
     padding: 0 1rem;
     /* a los enlaces que estan dentro de menu, se le quita padin arriba y abajo pero se le pone 1 rem de padding a los lados */
   }
-
   .menu a:last-child {
     padding-right: 0;
   }
-
   .menu a:hover {
     background-color: transparent;
   }
@@ -378,21 +374,17 @@ p {
     display: grid;
     grid-template-columns: repeat(2, 50%);
   }
-
   .portfolio .section-title {
     grid-column: span 2;
   }
-
   .portfolio-modal {
     flex-direction: row;
     max-width: 800px;
   }
-
   .portfolio-info {
     margin-left: 1rem;
     align-self: center;
   }
-
   .services > .container {
     display: grid;
     grid-template-columns: repeat(2, 45%);
@@ -400,7 +392,6 @@ p {
     justify-content: space-between;
     align-content: center;
   }
-
   .services .section-title {
     grid-column: span 2;
     /* quiere decir que section-title se va a expandir en columans 2 celdas. de esta manera se repara el problema anterior de las columnas */
@@ -415,7 +406,6 @@ p {
     align-content: center;
     /* DE ESTA MANERA EL CONTENIDO ESTARA CENTRADO EN MEDIO DE LA PANTALL */
   }
-
   .header {
     position: sticky;
     /* sticky es una mezcla de posicionamiento fijo y relativo solo que se comporta como fijo en la altura que tu definas y no tapa elementos ya creados como en el fixed que se pone enciama de los elementos, este si funciona en forma de cascada */
@@ -424,15 +414,12 @@ p {
     height: calc(4rem - 0.5rem);
     /* se redujo el tamaño del heigth respecto al 0.5rem que quitamos */
   }
-
   .portfolio > .container {
     grid-template-columns: repeat(3, 1fr);
   }
-
   .portfolio .section-title {
     grid-column: span 3;
   }
-
   /* Esto es para tener tres columanas en servicios en caso de que se necesite */
   /* .services>.container {
       grid-template-columns: repeat(3, 30%);
@@ -514,15 +501,12 @@ p {
     width: 100%;
     min-height: 100vh;
   }
-
   .text-lg-center {
     text-align: center;
   }
-
   .text-lg-left {
     text-align: left;
   }
-
   .text-lg-right {
     text-align: right;
   }
