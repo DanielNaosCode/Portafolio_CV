@@ -1,89 +1,85 @@
 /* ***************** Utilities ******************* */
 .bg-gray-ligth {
-    background-color: $gray-light-color;
+  background-color: $gray-light-color;
 }
 
 /* creó una clase y copio el efecto */
 .box-shadow-1 {
-    box-shadow: .25rem .25rem 1rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
 }
 
 .btn {
-    /* diseño del boton */
-    border-radius: .5rem;
-    padding: 1rem;
-    display: inline-block;
-    width: 200px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    color: $white-color;
-    background-color: $first-color;
+  /* diseño del boton */
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: inline-block;
+  width: 200px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: $white-color;
+  background-color: $first-color;
 }
 
 .container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $max-width;
 }
 
 .gray-scale {
-    filter: grayscale(1);
-    /* efecto de escala de grises */
+  filter: grayscale(1);
+  /* efecto de escala de grises */
 }
 
 .none {
-    display: none;
+  display: none;
 }
 
 .section {
-    padding: 2rem 1rem;
+  padding: 2rem 1rem;
 }
 
 .section-title {
-    border-top: thin solid $first-color;
-    border-bottom: thin solid $first-color;
-    margin: 2rem auto;
-    padding: .5rem 1rem;
-    text-align: center;
-    color: $title-color;
-    width: 250px;
-
+  border-top: thin solid $first-color;
+  border-bottom: thin solid $first-color;
+  margin: 2rem auto;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  color: $title-color;
+  width: 250px;
 }
 
 /* RESPONSIVE PARA TAMAÑOS */
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 .text-left {
-    text-align: left;
+  text-align: left;
 }
 
 .text-right {
+  text-align: right;
+}
+@media screen and (min-width: 1024px) {
+  /* esto es importante es el view port pantalla completa*/
+  .full-lg-screen {
+    /* clase para hacer el tammaño full screen despues de 1024 px de pantalla */
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  .text-lg-center {
+    text-align: center;
+  }
+
+  .text-lg-left {
+    text-align: left;
+  }
+
+  .text-lg-right {
     text-align: right;
+  }
 }
-
-@media screen and(min-width: 1024px) {
-
-    /* esto es importante es el view port pantalla completa*/
-    .full-lg-screen {
-        /* clase para hacer el tammaño full screen despues de 1024 px de pantalla */
-        width: 100%;
-        min-height: 100vh;
-    }
-
-    .text-lg-center {
-        text-align: center;
-    }
-
-    .text-lg-left {
-        text-align: left;
-    }
-
-    .text-lg-right {
-        text-align: right;
-    }
-}
-
 /* AQUI TERMINA ESTE RESPONSIVE */
