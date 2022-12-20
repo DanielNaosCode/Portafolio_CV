@@ -1,4 +1,9 @@
-/* ***************** Utilities ******************* */
+/* ***************** ///Utilities/// ******************* */
+.avatar {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+}
 .bg-gray-ligth {
   background-color: $gray-light-color;
 }
@@ -50,6 +55,9 @@
   width: 250px;
 }
 
+.text-first-color {
+  color: $first-color;
+}
 /* RESPONSIVE PARA TAMAÑOS */
 .text-center {
   text-align: center;

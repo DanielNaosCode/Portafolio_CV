@@ -1,9 +1,9 @@
 @charset "UTF-8";
-/* **************** Custom Properties ************* */
+/* **************** ///Custom Properties/// ************* */
 /* En el archivo SCSS estas todas las variables del custom properties */
 :root {
   --black-alpha-color: rgba(0, 0, 0, 0.5);
-  --white-color: #FFFFFF;
+  --white-color: #ffffff;
   --white-alpha-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -33,7 +33,7 @@ body {
 }
 
 a {
-  color: #873C8C;
+  color: #873c8c;
   transition: all 0.5s ease-out;
   /* Ease-out inicio rapido y al final lento el efecto */
 }
@@ -84,19 +84,74 @@ p {
   /* interlineado entre lineas de parrafos */
 }
 
-/* ********************** Components ********************** */
+/* ********************** ///Components/// ********************** */
+/* *********************** Carousel *********************** */
+.carousel {
+  margin: 2rem auto;
+  padding: 2rem 0;
+  max-width: 800px;
+  text-align: center;
+  background-color: var(--carousel-bg-color);
+  overflow-x: hidden;
+}
+
+.carousel .slides {
+  padding-left: 0;
+  width: 400%;
+  display: flex;
+  list-style: none;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel input {
+  display: none;
+}
+
+.carousel label {
+  border: medium solid #666666;
+  border-radius: 50%;
+  margin: 0 0.25rem;
+  cursor: pointer;
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+#slide-1:checked ~ .slides {
+  transform: translateX(0%);
+}
+
+#slide-2:checked ~ .slides {
+  transform: translateX(-25%);
+}
+
+#slide-3:checked ~ .slides {
+  transform: translateX(-50%);
+}
+
+#slide-4:checked ~ .slides {
+  transform: translateX(-75%);
+}
+
+#slide-1:checked ~ .slides-nav label#dot-1,
+#slide-2:checked ~ .slides-nav label#dot-2,
+#slide-3:checked ~ .slides-nav label#dot-3,
+#slide-4:checked ~ .slides-nav label#dot-4 {
+  background-color: #666666;
+}
+
 /* *********************** Menú *********************** */
 .menu-btn {
-  outline: thin solid #2BCAC8;
+  outline: thin solid #2bcac8;
   /* "contorno o outline" delgado y linea solida con tal color */
-  background-color: #091E2C;
+  background-color: #091e2c;
   border: 0;
   cursor: pointer;
 }
 
 .menu-btn svg {
   /* para dar color a los archivos svg se utiliza la propiedad fill que significa rellenar */
-  fill: #2BCAC8;
+  fill: #2bcac8;
 }
 
 .menu {
@@ -107,7 +162,7 @@ p {
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #091E2C;
+  background-color: #091e2c;
   opacity: 0;
   /* opacidad en 0 entonces lo eslemntos ahi estan pero no se ven */
   pointer-events: none;
@@ -128,12 +183,12 @@ p {
   font-weight: bold;
   text-align: center;
   text-decoration: none;
-  color: #2BCAC8;
+  color: #2bcac8;
 }
 
 .menu a:hover {
-  color: #FFFFFF;
-  background: #2BCAC8;
+  color: #ffffff;
+  background: #2bcac8;
 }
 
 @media screen and (min-width: 1024px) {
@@ -193,7 +248,7 @@ p {
 .modal-close svg {
   width: 3rem;
   height: 3rem;
-  fill: #2BCAC8;
+  fill: #2bcac8;
 }
 
 .modal[id|=trabajo]:target {
@@ -269,7 +324,7 @@ p {
   width: 100%;
   padding: 1rem;
   height: 4rem;
-  background-color: #091E2C;
+  background-color: #091e2c;
 }
 
 .header > .container {
@@ -279,7 +334,7 @@ p {
 }
 
 .logo a {
-  color: #2BCAC8;
+  color: #2bcac8;
   font-weight: bold;
   font-size: 2rem;
   text-decoration: none;
@@ -308,7 +363,7 @@ p {
   height: 100%;
   padding: 1rem;
   background-color: rgba(41, 157, 191, 0.75);
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 0;
   pointer-events: none;
   transition: all 0.5s ease-in-out;
@@ -321,7 +376,7 @@ p {
 
 .portfolio-card-info > div {
   padding: 1rem;
-  border: thin solid #FFFFFF;
+  border: thin solid #ffffff;
   width: 100%;
   height: 100%;
 }
@@ -331,11 +386,11 @@ p {
   max-width: 400px;
   display: flex;
   flex-direction: column;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .portfolio-modal h3 {
-  border-bottom: medium solid #2BCAC8;
+  border-bottom: medium solid #2bcac8;
   padding: 0.5rem 0;
   margin: 1rem auto;
   color: #333333;
@@ -350,7 +405,7 @@ p {
 }
 
 .portfolio-details b {
-  color: #2BCAC8;
+  color: #2bcac8;
 }
 
 .service-card {
@@ -364,7 +419,7 @@ p {
 }
 
 .service-card svg {
-  fill: #2BCAC8;
+  fill: #2bcac8;
   margin-bottom: 1.25rem;
 }
 
@@ -429,9 +484,15 @@ p {
       grid-column: span 3;
   } */
 }
-/* ***************** Utilities ******************* */
+/* ***************** ///Utilities/// ******************* */
+.avatar {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+}
+
 .bg-gray-ligth {
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
 }
 
 /* creó una clase y copio el efecto */
@@ -448,8 +509,8 @@ p {
   font-weight: bold;
   text-align: center;
   text-decoration: none;
-  color: #FFFFFF;
-  background-color: #2BCAC8;
+  color: #ffffff;
+  background-color: #2bcac8;
 }
 
 .container {
@@ -472,13 +533,17 @@ p {
 }
 
 .section-title {
-  border-top: thin solid #2BCAC8;
-  border-bottom: thin solid #2BCAC8;
+  border-top: thin solid #2bcac8;
+  border-bottom: thin solid #2bcac8;
   margin: 2rem auto;
   padding: 0.5rem 1rem;
   text-align: center;
   color: #333333;
   width: 250px;
+}
+
+.text-first-color {
+  color: #2bcac8;
 }
 
 /* RESPONSIVE PARA TAMAÑOS */
