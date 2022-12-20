@@ -86,6 +86,20 @@ p {
 
 /* ********************** ///Components/// ********************** */
 /* *********************** Carousel *********************** */
+@keyframes carousel-slide {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  75% {
+    transform: translateX(-75%);
+  }
+}
 .carousel {
   margin: 2rem auto;
   padding: 2rem 0;
@@ -101,6 +115,7 @@ p {
   display: flex;
   list-style: none;
   transition: transform 0.5s ease-in-out;
+  animation: carousel-slide 12s ease-in-out 3s;
 }
 
 .carousel input {
@@ -477,12 +492,12 @@ p {
   }
   /* Esto es para tener tres columanas en servicios en caso de que se necesite */
   /* .services>.container {
-      grid-template-columns: repeat(3, 30%);
-  }
+        grid-template-columns: repeat(3, 30%);
+    }
 
-  .services .section-title {
-      grid-column: span 3;
-  } */
+    .services .section-title {
+        grid-column: span 3;
+    } */
 }
 /* ***************** ///Utilities/// ******************* */
 .avatar {

@@ -1,6 +1,22 @@
 /* ********************** ///Components/// ********************** */
 
 /* *********************** Carousel *********************** */
+@keyframes carousel-slide {
+  //Animación automatica para el carousel
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  75% {
+    transform: translateX(-75%);
+  }
+  //hay que definir la animacion en .carousel .slides
+}
 .carousel {
   margin: 2rem auto;
   padding: 2rem 0;
@@ -18,6 +34,7 @@
   display: flex;
   list-style: none;
   transition: transform 0.5s ease-in-out; //efecto de 0.5 seg de adentro hacia afuera
+  animation: carousel-slide 12s ease-in-out 3s;
 }
 
 .carousel input {
