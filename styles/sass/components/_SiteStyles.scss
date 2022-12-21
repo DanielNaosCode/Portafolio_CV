@@ -1,184 +1,182 @@
 /* **************** Site Styles ************* */
-.about>article {
-    margin-bottom: 2rem;
+.about > article {
+  margin-bottom: 2rem;
 }
 
 .header {
-    /* el header en version mobile va hasta abajo de la pantalla */
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    z-index: 999;
-    /* z-index tan alto para que ningun elemnto para por encima del menú */
-    width: 100%;
-    padding: 1rem;
-    height: $header-height;
-    background-color: $second-color;
+  /* el header en version mobile va hasta abajo de la pantalla */
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  /* z-index tan alto para que ningun elemnto para por encima del menú */
+  width: 100%;
+  padding: 1rem;
+  height: $header-height;
+  background-color: $second-color;
 }
 
-.header>.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo a {
-    color: $first-color;
-    font-weight: bold;
-    font-size: 2rem;
-    text-decoration: none;
+  color: $first-color;
+  font-weight: bold;
+  font-size: 2rem;
+  text-decoration: none;
 }
 
 .portfolio-card {
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-    display: block;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
 }
 
 .portfolio-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* funciona para que no se deformen las imagenes y solo se acomoden al tamaño de su contenedor */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* funciona para que no se deformen las imagenes y solo se acomoden al tamaño de su contenedor */
 }
 
 .portfolio-card-info {
-    position: absolute;
-    top: 0;
-    left: 0;
-    /* se pone position absolute porque estara encima de su elemento padre que es portfolio-card que tiene position relative y el top y left es para el posisionamienento en coordenadas respecto a su elemento padre, como está en 0 y 0 entoces estara al centro del elemento */
-    width: 100%;
-    height: 100%;
-    padding: 1rem;
-    background-color: $first-alpha-color;
-    color: $white-color;
-    opacity: 0;
-    pointer-events: none;
-    transition: all .5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* se pone position absolute porque estara encima de su elemento padre que es portfolio-card que tiene position relative y el top y left es para el posisionamienento en coordenadas respecto a su elemento padre, como está en 0 y 0 entoces estara al centro del elemento */
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background-color: $first-alpha-color;
+  color: $white-color;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
 }
 
 .portfolio-card:hover .portfolio-card-info {
-    opacity: 1;
-    pointer-events: auto;
+  opacity: 1;
+  pointer-events: auto;
 }
 
-.portfolio-card-info>div {
-    padding: 1rem;
-    border: thin solid $white-color;
-    width: 100%;
-    height: 100%;
+.portfolio-card-info > div {
+  padding: 1rem;
+  border: thin solid $white-color;
+  width: 100%;
+  height: 100%;
 }
 
 .portfolio-modal {
-    padding: 1rem;
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    background-color: $white-color;
+  padding: 1rem;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  background-color: $white-color;
 }
 
 .portfolio-modal h3 {
-    border-bottom: medium solid $first-color;
-    padding: .5rem 0;
-    margin: 1rem auto;
-    color: $title-color;
+  border-bottom: medium solid $first-color;
+  padding: 0.5rem 0;
+  margin: 1rem auto;
+  color: $title-color;
 }
 
 .portfolio-details {
-    display: grid;
-    grid-template-columns: 40% 60%;
-    /* una columna de 40% y otra de 60% */
-    grid-auto-rows: 2rem;
-    /* este es el tamaño por defecto que se la dara a las filas implicitamente  */
+  display: grid;
+  grid-template-columns: 40% 60%;
+  /* una columna de 40% y otra de 60% */
+  grid-auto-rows: 2rem;
+  /* este es el tamaño por defecto que se la dara a las filas implicitamente  */
 }
 
 .portfolio-details b {
-    color: $first-color;
+  color: $first-color;
 }
 
 .service-card {
-    margin: 1rem auto;
-    padding: 1rem;
-    text-align: center;
+  margin: 1rem auto;
+  padding: 1rem;
+  text-align: center;
 }
 
 .service-card h3 {
-    color: $title-color;
+  color: $title-color;
 }
 
 .service-card svg {
-    fill: $first-color;
-    margin-bottom: 1.25rem;
+  fill: $first-color;
+  margin-bottom: 1.25rem;
 }
 
-
 /* Tamaño tablet */
-@media screen and (min-width:768px) {
-    .portfolio>.container {
-        display: grid;
-        grid-template-columns: repeat(2, 50%);
-    }
+@media screen and (min-width: 768px) {
+  .portfolio > .container {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
 
-    .portfolio .section-title {
-        grid-column: span 2;
-    }
+  .portfolio .section-title {
+    grid-column: span 2;
+  }
 
-    .portfolio-modal {
-        flex-direction: row;
-        max-width: 800px;
-    }
+  .portfolio-modal {
+    flex-direction: row;
+    max-width: 800px;
+  }
 
-    .portfolio-info {
-        margin-left: 1rem;
-        align-self: center;
-    }
+  .portfolio-info {
+    margin-left: 1rem;
+    align-self: center;
+  }
 
-    .services>.container {
-        display: grid;
-        grid-template-columns: repeat(2, 45%);
-        /* 45% porque entre 2 serian 90 y tendriamos 10% libre para repartir */
-        justify-content: space-between;
-        align-content: center;
-    }
+  .services > .container {
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    /* 45% porque entre 2 serian 90 y tendriamos 10% libre para repartir */
+    justify-content: space-between;
+    align-content: center;
+  }
 
-    .services .section-title {
-        grid-column: span 2;
-        /* quiere decir que section-title se va a expandir en columans 2 celdas. de esta manera se repara el problema anterior de las columnas */
-    }
-
+  .services .section-title {
+    grid-column: span 2;
+    /* quiere decir que section-title se va a expandir en columans 2 celdas. de esta manera se repara el problema anterior de las columnas */
+  }
 }
 
 /* Tamaño fullscreen */
-@media screen and (min-width:1024px) {
-    .about {
-        display: grid;
-        grid-template-columns: repeat(3, 30%);
-        justify-content: space-between;
-        align-content: center;
-        /* DE ESTA MANERA EL CONTENIDO ESTARA CENTRADO EN MEDIO DE LA PANTALL */
-    }
+@media screen and (min-width: 1024px) {
+  .about {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content: space-between;
+    align-content: center;
+    /* DE ESTA MANERA EL CONTENIDO ESTARA CENTRADO EN MEDIO DE LA PANTALL */
+  }
 
-    .header {
-        position: sticky;
-        /* sticky es una mezcla de posicionamiento fijo y relativo solo que se comporta como fijo en la altura que tu definas y no tapa elementos ya creados como en el fixed que se pone enciama de los elementos, este si funciona en forma de cascada */
-        top: 0;
-        padding: 0.5rem;
-        height: calc(#{$header-height} - 0.5rem);
-        /* se redujo el tamaño del heigth respecto al 0.5rem que quitamos */
-    }
+  .header {
+    position: sticky;
+    /* sticky es una mezcla de posicionamiento fijo y relativo solo que se comporta como fijo en la altura que tu definas y no tapa elementos ya creados como en el fixed que se pone enciama de los elementos, este si funciona en forma de cascada */
+    top: 0;
+    padding: 0.5rem;
+    height: calc(#{$header-height} - 0.5rem);
+    /* se redujo el tamaño del heigth respecto al 0.5rem que quitamos */
+  }
 
-    .portfolio>.container {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .portfolio > .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-    .portfolio .section-title {
-        grid-column: span 3;
-    }
+  .portfolio .section-title {
+    grid-column: span 3;
+  }
 
-    /* Esto es para tener tres columanas en servicios en caso de que se necesite */
+  /* Esto es para tener tres columanas en servicios en caso de que se necesite */
 
-    /* .services>.container {
+  /* .services>.container {
         grid-template-columns: repeat(3, 30%);
     }
 

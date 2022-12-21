@@ -1,125 +1,204 @@
-/* ********************** Components ********************** */
+/* ********************** ///Components/// ********************** */
+
+/* *********************** Carousel *********************** */
+@keyframes carousel-slide {
+  //Animación automatica para el carousel
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  75% {
+    transform: translateX(-75%);
+  }
+  //hay que definir la animacion en .carousel .slides
+}
+.carousel {
+  margin: 2rem auto;
+  padding: 2rem 0;
+  max-width: 800px;
+  text-align: center;
+  background-color: var(--carousel-bg-color);
+  overflow-x: hidden;
+}
+
+.carousel .slides {
+  padding-left: 0;
+  //para quitar el bulet o espacio que tiene la ul
+  //100% POR CADA SLIDE
+  width: 400%; //Como el ancho es de 400% entonces no caben los slide y solo da acceso a un slide a la vez
+  display: flex;
+  list-style: none;
+  transition: transform 0.5s ease-in-out; //efecto de 0.5 seg de adentro hacia afuera
+  animation: carousel-slide 12s ease-in-out 3s;
+}
+
+.carousel input {
+  display: none;
+}
+
+.carousel label {
+  border: medium solid $gray-dark-color;
+  border-radius: 50%;
+  margin: 0 0.25rem;
+  cursor: pointer;
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+#slide-1:checked ~ .slides {
+  // ~ en css ese simbolo significa: mueve al hermano que tines a un lado
+  transform: translateX(0%);
+}
+
+#slide-2:checked ~ .slides {
+  // ~ en css ese simbolo significa: mueve al hermano que tines a un lado
+  transform: translateX(-25%);
+  //25% porque 100% se divide entre la cantidad de labels en este caso son 4
+}
+#slide-3:checked ~ .slides {
+  // ~ en css ese simbolo significa: mueve al hermano que tines a un lado
+  transform: translateX(-50%);
+}
+#slide-4:checked ~ .slides {
+  // ~ en css ese simbolo significa: mueve al hermano que tines a un lado
+  transform: translateX(-75%);
+}
+
+#slide-1:checked ~ .slides-nav label#dot-1,
+#slide-2:checked ~ .slides-nav label#dot-2,
+#slide-3:checked ~ .slides-nav label#dot-3,
+#slide-4:checked ~ .slides-nav label#dot-4 {
+  background-color: $gray-dark-color;
+  //cuando este checado el slide 1 se movera los efectos a los hermanos del slides-nav osea los label
+  //en este caso el efecto que se movera al labeldot-1 es el color de fondo y asi con todos
+}
 
 /* *********************** Menú *********************** */
 .menu-btn {
-    outline: thin solid $first-color;
-    /* "contorno o outline" delgado y linea solida con tal color */
-    background-color: $second-color;
-    border: 0;
-    cursor: pointer;
+  outline: thin solid $first-color;
+  /* "contorno o outline" delgado y linea solida con tal color */
+  background-color: $second-color;
+  border: 0;
+  cursor: pointer;
 }
 
 .menu-btn svg {
-    /* para dar color a los archivos svg se utiliza la propiedad fill que significa rellenar */
-    fill: $first-color;
+  /* para dar color a los archivos svg se utiliza la propiedad fill que significa rellenar */
+  fill: $first-color;
 }
 
 .menu {
-    position: fixed;
-    /* cuando se usa fixed se pierden las propiedades de ancho y altura */
-    left: 0;
-    bottom: $header-height;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: $second-color;
-    opacity: 0;
-    /* opacidad en 0 entonces lo eslemntos ahi estan pero no se ven */
-    pointer-events: none;
-    /* como los elementos ahi siguen funcionando aunque no se vean se utiliza "pointer-events:none" para que aunque se aplasten los elemntos sin verlos, estos no tengan ningun efecto*/
-    transition: opacity .5s ease;
-    /* 0.5 segundos y se acelerara al principio del efecto */
+  position: fixed;
+  /* cuando se usa fixed se pierden las propiedades de ancho y altura */
+  left: 0;
+  bottom: $header-height;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $second-color;
+  opacity: 0;
+  /* opacidad en 0 entonces lo eslemntos ahi estan pero no se ven */
+  pointer-events: none;
+  /* como los elementos ahi siguen funcionando aunque no se vean se utiliza "pointer-events:none" para que aunque se aplasten los elemntos sin verlos, estos no tengan ningun efecto*/
+  transition: opacity 0.5s ease;
+  /* 0.5 segundos y se acelerara al principio del efecto */
 }
 
 /* el menu se activa de la siguiente manera */
 .menu.is-active {
-    opacity: 1;
-    pointer-events: auto;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .menu a {
-    padding: 1rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    color: $first-color
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: $first-color;
 }
 
 .menu a:hover {
-    color: $white-color;
-    background: $first-color;
+  color: $white-color;
+  background: $first-color;
 }
 
-@media screen and (min-width:1024px) {
-    .menu-btn {
-        display: none;
-    }
+@media screen and (min-width: 1024px) {
+  .menu-btn {
+    display: none;
+  }
 
-    .menu {
-        position: static;
-        /* este es el posicionamiento por defecto de css y se lo volvimos a poner */
-        width: auto;
-        /* el anco se adapta de acuerdo al numero de enlaces que se tienen */
-        flex-direction: row;
-        /* como ya tiene flexbox que se puso anteriormente se pueden usar sus propiedades */
-        opacity: 1;
-        /* se vulve a mostrar el menu porque le habiamos puesto la opacidad en 0 */
-        pointer-events: auto;
-        /* y el cursor ahora es automatio de nuevo */
-    }
+  .menu {
+    position: static;
+    /* este es el posicionamiento por defecto de css y se lo volvimos a poner */
+    width: auto;
+    /* el anco se adapta de acuerdo al numero de enlaces que se tienen */
+    flex-direction: row;
+    /* como ya tiene flexbox que se puso anteriormente se pueden usar sus propiedades */
+    opacity: 1;
+    /* se vulve a mostrar el menu porque le habiamos puesto la opacidad en 0 */
+    pointer-events: auto;
+    /* y el cursor ahora es automatio de nuevo */
+  }
 
-    .menu a {
-        padding: 0 1rem;
-        /* a los enlaces que estan dentro de menu, se le quita padin arriba y abajo pero se le pone 1 rem de padding a los lados */
-    }
+  .menu a {
+    padding: 0 1rem;
+    /* a los enlaces que estan dentro de menu, se le quita padin arriba y abajo pero se le pone 1 rem de padding a los lados */
+  }
 
-    .menu a:last-child {
-        padding-right: 0;
-    }
+  .menu a:last-child {
+    padding-right: 0;
+  }
 
-    .menu a:hover {
-        background-color: transparent;
-    }
+  .menu a:hover {
+    background-color: transparent;
+  }
 }
 
 /* *********************** Modal *********************** */
 
 .modal {
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $black-alpha-color;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 1s;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $black-alpha-color;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 1s;
 }
 
 .modal-content {
-    position: relative;
+  position: relative;
 }
 
 .modal-close {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
 
 .modal-close svg {
-    width: 3rem;
-    height: 3rem;
-    fill: $first-color;
+  width: 3rem;
+  height: 3rem;
+  fill: $first-color;
 }
 
 .modal[id|="trabajo"]:target {
-    /* selector avanzado busca a todos los elementos que en la clase modal comiencen con la palabra trabajo */
-    /* se usa un selector atributo con el simpobolo piep */
-    opacity: 1;
-    pointer-events: auto;
+  /* selector avanzado busca a todos los elementos que en la clase modal comiencen con la palabra trabajo */
+  /* se usa un selector atributo con el simpobolo piep */
+  opacity: 1;
+  pointer-events: auto;
 }

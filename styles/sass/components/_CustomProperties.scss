@@ -1,29 +1,28 @@
-/* **************** Custom Properties ************* */
+/* **************** ///Custom Properties/// ************* */
 /* En el archivo SCSS estas todas las variables del custom properties */
 :root {
-    --black-alpha-color: rgba(0, 0, 0, 0.5);
-    --white-color: #FFFFFF;
-    --white-alpha-color: rgba(255, 255, 255, 0.5);
+  --black-alpha-color: rgba(0, 0, 0, 0.5);
+  --white-color: #ffffff;
+  --white-alpha-color: rgba(255, 255, 255, 0.5);
 }
 
-$font: "Raleway",
-sans-serif;
-$first-color: #2BCAC8;
+$font: "Raleway", sans-serif;
+$first-color: #2bcac8;
 $first-alpha-color: rgba(41, 157, 191, 0.75);
-$second-color: #091E2C;
+$second-color: #091e2c;
 $second-alpha-color: rgba(20, 25, 45, 0.75);
 $third-color: #124052;
 $third-alpha-color: rgba(26, 104, 134, 0.75);
-$white-color: #FFFFFF;
-$gray-light-color: #F3F3F3;
-$gray-color: #CCCCCC;
+$white-color: #ffffff;
+$gray-light-color: #f3f3f3;
+$gray-color: #cccccc;
 $gray-dark-color: #666666;
 $black-color: #000000;
-$link-color: #873C8C;
+$link-color: #873c8c;
 $title-color: #333333;
 $text-color: #222222;
 $white-alpha-color: rgba(255, 255, 255, 0.5);
 $black-alpha-color: rgba(0, 0, 0, 0.5);
-$max-width:1200px;
+$max-width: 1200px;
 /* variable de ancho maximo (asi si debo cambiar el ancho, solo se cambia aqui y se modifica en todo donde se agregó la variable */
-$header-height:4rem;
+$header-height: 4rem;
