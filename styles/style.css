@@ -329,6 +329,14 @@ p {
   margin-bottom: 2rem;
 }
 
+.footer {
+  margin-bottom: 4rem;
+  background-color: #2bcac8;
+  color: #ffffff;
+  text-align: center;
+  padding: 0.5rem;
+}
+
 .header {
   /* el header en version mobile va hasta abajo de la pantalla */
   position: fixed;
@@ -483,6 +491,9 @@ p {
     padding: 0.5rem;
     height: calc(4rem - 0.5rem);
     /* se redujo el tamaño del heigth respecto al 0.5rem que quitamos */
+  }
+  .footer {
+    margin-bottom: 0;
   }
   .portfolio > .container {
     grid-template-columns: repeat(3, 1fr);
