@@ -22,8 +22,8 @@
   padding: 2rem 0;
   max-width: 800px;
   text-align: center;
-  background-color: var(--carousel-bg-color);
   overflow-x: hidden;
+  background-color: var(--carousel-bg-color);
 }
 
 .carousel .slides {
@@ -45,10 +45,10 @@
   border: medium solid $gray-dark-color;
   border-radius: 50%;
   margin: 0 0.25rem;
-  cursor: pointer;
   display: inline-block;
   width: 0.75rem;
   height: 0.75rem;
+  cursor: pointer;
 }
 
 #slide-1:checked ~ .slides {
@@ -77,6 +77,88 @@
   background-color: $gray-dark-color;
   //cuando este checado el slide 1 se movera los efectos a los hermanos del slides-nav osea los label
   //en este caso el efecto que se movera al labeldot-1 es el color de fondo y asi con todos
+}
+
+/* ********************+ Contact Forms ********************* */
+.contact-form {
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 800px;
+}
+
+.contact-form > * {
+  padding: 0.5rem;
+  margin: 1rem auto;
+  display: block;
+  width: 100%;
+}
+.contact-form input,
+.contact-form textarea {
+  font-size: 0.85rem;
+  font-family: $font;
+}
+
+.contact-form input {
+  border: 0;
+  padding-left: 0;
+  border-bottom: thin solid $gray-dark-color;
+}
+
+.contact-form textarea {
+  border: thin solid $gray-dark-color;
+  resize: none; /* para desaparecer el triangulo del text area y que no se pueda modificar el tamaño */
+}
+
+.contact-form input[type="submit"] {
+  margin-top: 0;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+
+.contact-form input[type="submit"]:hover {
+  opacity: 0.75;
+}
+
+.contact-form *::placeholder {
+  /* a todos los elementos sin importar que tipo sean, pero que tengan la pseudoclace placeholder se aplicaran los estilos */
+  color: $gray-dark-color;
+}
+
+.contact-form-response {
+  padding: 1rem;
+  width: 400px;
+  text-align: center;
+  background-color: $white-color;
+}
+
+.contact-form-response svg {
+  margin-top: 2rem;
+  width: 4rem;
+  height: 4rem;
+  fill: $first-color;
+}
+
+.modal#gracias:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+@media screen and (min-width: 1024px) {
+  .contact-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem;
+  }
+  .contact-form textarea,
+  .contact-form-loader {
+    grid-column: span 2;
+  }
+  .contact-form input[type="submit"] {
+    margin-left: 0;
+  }
 }
 
 /* *********************** Menú *********************** */

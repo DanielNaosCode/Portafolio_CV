@@ -1,8 +1,35 @@
-/* **************** Site Styles ************* */
+/* **************** ///Site Styles/// ************* */
 .about > article {
   margin-bottom: 2rem;
 }
+.contact-card {
+  margin: 1rem auto;
+  padding: 1rem;
+  width: 100%;
+  height: 144px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
 
+.contact-card > svg {
+  /* Tamaño y color de los iconos */
+  width: 2rem;
+  height: 2rem;
+  fill: $first-color;
+}
+
+.contact-card > small {
+  margin-top: -1rem;
+}
+.footer {
+  margin-bottom: $header-height;
+  background-color: $first-color;
+  color: $white-color;
+  text-align: center;
+  padding: 0.5rem;
+} 
 .header {
   /* el header en version mobile va hasta abajo de la pantalla */
   position: fixed;
@@ -112,8 +139,23 @@
   margin-bottom: 1.25rem;
 }
 
+.social-media a {
+  text-decoration: none;
+  padding: 0 0.4rem;
+}
+
+.social-media svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 /* Tamaño tablet */
 @media screen and (min-width: 768px) {
+  .contact-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 48%);
+    justify-content: space-between;
+  }
   .portfolio > .container {
     display: grid;
     grid-template-columns: repeat(2, 50%);
@@ -156,7 +198,10 @@
     align-content: center;
     /* DE ESTA MANERA EL CONTENIDO ESTARA CENTRADO EN MEDIO DE LA PANTALL */
   }
-
+  .contact-cards {
+    grid-template-columns: repeat(4, 24%);
+    //ya no se usa display grid porque ya esta cargado en el media query anterior
+  }
   .header {
     position: sticky;
     /* sticky es una mezcla de posicionamiento fijo y relativo solo que se comporta como fijo en la altura que tu definas y no tapa elementos ya creados como en el fixed que se pone enciama de los elementos, este si funciona en forma de cascada */
