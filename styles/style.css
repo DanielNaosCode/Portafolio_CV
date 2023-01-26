@@ -615,6 +615,9 @@ p {
     height: calc(4rem - 0.5rem);
     /* se redujo el tamaño del heigth respecto al 0.5rem que quitamos */
   }
+  .footer {
+    margin-bottom: 0;
+  }
   .portfolio > .container {
     grid-template-columns: repeat(3, 1fr);
   }
