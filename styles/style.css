@@ -351,7 +351,7 @@ p {
 
 .modal[id|=trabajo]:target {
   /* selector avanzado busca a todos los elementos que en la clase modal comiencen con la palabra trabajo */
-  /* se usa un selector atributo con el simpobolo piep */
+  /* se usa un selector atributo con el simpobolo piep   b */
   opacity: 1;
   pointer-events: auto;
 }
@@ -362,6 +362,7 @@ p {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1.2rem;
   text-align: center;
+  margin-top: 1rem;
 }
 
 .skills li {
@@ -693,6 +694,10 @@ p {
 
 .text-first-color {
   color: #2bcac8;
+}
+
+.space {
+  margin-top: 2rem;
 }
 
 /* RESPONSIVE PARA TAMAÑOS */
