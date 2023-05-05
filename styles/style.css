@@ -413,6 +413,11 @@ p {
   margin-bottom: 2rem;
 }
 
+.aling-center {
+  display: flex;
+  justify-content: center;
+}
+
 .contact-card {
   margin: 1rem auto;
   padding: 1rem;
